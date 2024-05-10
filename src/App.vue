@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    
+    <TemplateFun/>
   </div>
 </template>
 
 <script>
-
+import TemplateFun from "./components/TemplateFun";
 
 export default {
   name: 'App',
   components: {
-    
+    TemplateFun
   }
 }
 </script>
