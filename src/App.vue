@@ -2,16 +2,18 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <TemplateFun/>
+    <VueCookies/>
   </div>
 </template>
 
 <script>
 import TemplateFun from "./components/TemplateFun";
+import VueCookies from "./components/VueCookies"
 
 export default {
   name: 'App',
   components: {
-    TemplateFun
+    TemplateFun, VueCookies
   }
 }
 </script>
