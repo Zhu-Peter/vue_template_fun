@@ -1,15 +1,30 @@
 <template>
  <div id="fun">
-    <h1>fun</h1>
+    <div class="fun">
+        <div v-for="(user, i) in users" :key="`index-${i}`">
+            <img :src=user.avatar alt="">
+            <p>{{ user.first_name }} {{ user.last_name }}</p>
+            <p>{{ user.email }}</p>
+        </div>
+    </div>
  </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     name: 'TemplateFun',
-    props: {
-        msg: String
-    }
+    data() {
+        return {
+            users: {},
+        }
+    },
+    mounted() {
+        axios.request({
+            url: 'https://reqres.in/api/users'
+        }).then((request)=>{this.users = request.data.data; console.log(this.users)}).catch((error)=>{console.log(error)})
+    },
 }
 </script>
 
