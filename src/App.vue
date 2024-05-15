@@ -1,19 +1,16 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <TemplateFun/>
-    <VueCookies/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import TemplateFun from "./components/TemplateFun";
-import VueCookies from "./components/VueCookies"
+
 
 export default {
   name: 'App',
   components: {
-    TemplateFun, VueCookies
+    
   }
 }
 </script>
